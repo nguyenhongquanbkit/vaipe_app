@@ -4,12 +4,12 @@ class UserInfo {
   String id;
   String account;
   String password;
-  String fullName;
+  String email;
   UserInfo({
     required this.id,
     required this.account,
     required this.password,
-    required this.fullName,
+    required this.email,
   });
 
   UserInfo copyWith({
@@ -22,7 +22,7 @@ class UserInfo {
       id: id ?? this.id,
       account: account ?? this.account,
       password: password ?? this.password,
-      fullName: fullName ?? this.fullName,
+      email: fullName ?? this.email,
     );
   }
 
@@ -31,7 +31,7 @@ class UserInfo {
       'id': id,
       'account': account,
       'password': password,
-      'fullName': fullName,
+      'email': email,
     };
   }
 
@@ -40,7 +40,7 @@ class UserInfo {
       id: map['id'] ?? '',
       account: map['account'] ?? '',
       password: map['password'] ?? '',
-      fullName: map['fullName'] ?? '',
+      email: map['email'] ?? '',
     );
   }
 
@@ -51,7 +51,7 @@ class UserInfo {
 
   @override
   String toString() {
-    return 'UserInfo(id: $id, account: $account, password: $password, fullName: $fullName)';
+    return 'UserInfo(id: $id, account: $account, password: $password, email: $email)';
   }
 
   @override
@@ -62,14 +62,11 @@ class UserInfo {
         other.id == id &&
         other.account == account &&
         other.password == password &&
-        other.fullName == fullName;
+        other.email == email;
   }
 
   @override
   int get hashCode {
-    return id.hashCode ^
-        account.hashCode ^
-        password.hashCode ^
-        fullName.hashCode;
+    return id.hashCode ^ account.hashCode ^ password.hashCode ^ email.hashCode;
   }
 }

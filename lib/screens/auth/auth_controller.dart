@@ -22,7 +22,7 @@ class AuthenticateController extends GetxController {
         id: userId,
         account: account,
         password: password,
-        fullName: userId,
+        email: '',
       );
       log(userLogged.toString());
       userInfo.value = userLogged;
