@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:get/route_manager.dart';
-import 'package:ks_base_getx/routes/app_routes.dart';
-import 'package:ks_base_getx/routes/routes.dart';
 import 'package:get/get.dart';
-import 'package:ks_base_getx/screens/auth/controller.dart';
+import 'package:vaipe/routes/app_routes.dart';
+import 'package:vaipe/routes/routes.dart';
+import 'package:vaipe/screens/auth/auth_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RouteNames.LOGIN,
+      initialRoute: RouteNames.login,
       getPages: AppRoutes.routes,
     );
   }

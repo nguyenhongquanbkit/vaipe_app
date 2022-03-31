@@ -1,4 +1,4 @@
 class RouteNames {
-  static String LOGIN = "/login";
-  static String HOME = "/home";
+  static String login = "/login";
+  static String home = "/home";
 }
